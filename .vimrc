@@ -60,6 +60,11 @@ map <silent> <C-h> :call WinMove('h')<CR>
 map <silent> <C-j> :call WinMove('j')<CR>
 map <silent> <C-k> :call WinMove('k')<CR>
 map <silent> <C-l> :call WinMove('l')<CR>
+inoremap jj <Esc>
+
+let &t_SI.="\e[5 q" "SI = INSERT mode
+let &t_SR.="\e[4 q" "SR = REPLACE mode
+let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 
 function! WinMove(key)
   let t:curwin = winnr()
