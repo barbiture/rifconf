@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/barbi/.oh-my-zsh"
@@ -107,6 +107,9 @@ alias media="cd /Volumes/RIFarhive/media"
 alias chrome="open -a /Applications/Google\ Chrome.app"
 alias gc="git checkout"
 alias gb="git branch"
+alias gcm="git checkout master"
+alias gcd="git checkout dev"
+alias gct="git checkout test2"
 alias fig="/Applications/Figma.app/Contents/MacOS/Figma"
 alias ydl="youtube-dl"
 #export PATH="/usr/local/opt/node@8/bin:$PATH"
@@ -115,3 +118,4 @@ export PATH="/usr/local/opt/node@11/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPS="--extended"
+
