@@ -1,3 +1,6 @@
+export LC_ALL=en_US.UTF-8
+PS1="  🍀"
+eval "$(pyenv init -)"
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -5,12 +8,20 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH="/Users/barbi/.oh-my-zsh"
 
 export PATH=~/.npm-global/bin:$PATH
+
+
+export PATH="/usr/local/opt/node@11/bin:$PATH"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_OPS="--extended"
+export PATH="/usr/local/sbin:$PATH"
+
 NPM_CONFIG_PREFIX=~/.npm-global
+
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="amuse"
+ZSH_THEME="af-magic"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -102,6 +113,7 @@ alias rmf="rm -rf"
 alias lsa="ls -la"
 alias rif="cd /Volumes/RIFarhive"
 alias play="cd ~/playground"
+alias playRif="cd /Volumes/RIFarhive/playground"
 alias pj="cd ~/pj"
 alias media="cd /Volumes/RIFarhive/media"
 alias chrome="open -a /Applications/Google\ Chrome.app"
@@ -112,10 +124,13 @@ alias gcd="git checkout dev"
 alias gct="git checkout test2"
 alias fig="/Applications/Figma.app/Contents/MacOS/Figma"
 alias ydl="youtube-dl"
+alias stuf="/Volumes/RIFarhive/assets"
+alias dev="~/pj/myKit"
+alias py="/usr/local/Cellar/python@3.8/3.8.1/bin/python3.8"
+alias pip="/usr/local/Cellar/python@3.8/3.8.1/bin/pip3.8"
 #export PATH="/usr/local/opt/node@8/bin:$PATH"
+#
 #export PATH="/usr/local/opt/node@10/bin:$PATH"
-export PATH="/usr/local/opt/node@11/bin:$PATH"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_OPS="--extended"
-
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi

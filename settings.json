@@ -1,0 +1,45 @@
+{
+    "editor": {
+        "fontFamily": "'Fira Code', monospace",
+        "fontLigatures": true,
+        "fontWeight": "100",
+        "fontSize": "12px"
+    },
+
+    "vim": {
+        "easymotion": true,
+        "sneak": true,
+        "incsearch": true,
+        "useSystemClipboard": true,
+        "useCtrlKeys": true,
+        "hlsearch": true,
+        "vim.normalModeKeyBindingsNonRecursive": [
+            {
+                "before": ["s"],
+                "after": ["k", "k", "s"]
+            }
+        ],
+        "insertModeKeyBindings": [
+            {
+                "before": ["j", "j"],
+                "after": ["<Esc>"]
+            }
+        ],
+        "normalModeKeyBindingsNonRecurisive": [
+            {
+                "before": ["<leader>", "d"],
+                "after": ["d", "d"]
+            },
+            {
+                "before": ["<C-n>"],
+                "commands": [":nohl"]
+            }
+        ],
+        "leader": "<space>",
+        "handleKyes": {
+            "<C-a>": false,
+            "<C-f>": false
+        }
+    },
+    "editor.renderWhitespace": "all"
+}
