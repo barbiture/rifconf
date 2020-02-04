@@ -1,0 +1,5 @@
+save
+brew list > name.txt
+
+read
+You can do brew leaves > my_brews.txt and then on the new machine do for i in $(cat brew_leaves); do; brew install "$i"; done. You can use newlines where there are semicolons above. [assuming bash]
