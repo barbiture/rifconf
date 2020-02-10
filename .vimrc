@@ -31,8 +31,8 @@ map <silent> <C-l> :call WinMove('l')<CR>
 " ================ Plug Initialization ====================
 
 " Call the .vimrc.plug file
-if filereadable(expand("~/.vimrc.plug"))
-	source ~/.vimrc.plug
+if filereadable(expand("~/rifconf/.vimrc.plug"))
+	source ~/rifconf/.vimrc.plug
 endif
 
 " ================ Turn Off Swap Files ====================
@@ -102,7 +102,7 @@ set sidescroll=1
 set hlsearch "Set highlight in search
 set incsearch "Set incremental search
 
-for f in split(glob('~/myconf/vim/*.vim'), '\n')
+for f in split(glob('~/rifconf/vim/*.vim'), '\n')
 	exe 'source' f
 endfor
 "COLORSCHEME
@@ -113,7 +113,7 @@ let g:python_highlight_all = 1
 "let g:jsx_ext_required=1
 "let g:UltiSnipsExpandTrigger="<C-l>"
 "set tab
-set guifont=Fira\ Code:h12 
+set guifont=JetBrains\ Mono:h12 
 set encoding=utf-8
 "set wildmenu
 

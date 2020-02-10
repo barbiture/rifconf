@@ -1,22 +1,23 @@
 export LC_ALL=en_US.UTF-8
-PS1="  🍀"
-eval "$(pyenv init -)"
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/barbi/.oh-my-zsh"
+export ZSH="/Users/rif/.oh-my-zsh"
 
 export PATH=~/.npm-global/bin:$PATH
 
 
-export PATH="/usr/local/opt/node@11/bin:$PATH"
+#export PATH="/usr/local/opt/node@11/bin:$PATH"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPS="--extended"
-export PATH="/usr/local/sbin:$PATH"
+#export PATH="/usr/local/sbin:$PATH"
 
-NPM_CONFIG_PREFIX=~/.npm-global
+#NPM_CONFIG_PREFIX=~/.npm-global
 
+if command -v pyenv 1>/dev/null 2>&1; then
+	eval "$(pyenv init -)"
+fi
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -75,11 +76,8 @@ ZSH_THEME="af-magic"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  git
-)
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -128,9 +126,3 @@ alias stuf="/Volumes/RIFarhive/assets"
 alias dev="~/pj/myKit"
 alias py="/usr/local/Cellar/python@3.8/3.8.1/bin/python3.8"
 alias pip="/usr/local/Cellar/python@3.8/3.8.1/bin/pip3.8"
-#export PATH="/usr/local/opt/node@8/bin:$PATH"
-#
-#export PATH="/usr/local/opt/node@10/bin:$PATH"
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
