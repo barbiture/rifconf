@@ -1,48 +1,55 @@
+export MICRONAUT_CONFIG_FILES="/Users/barbi/dev/ice/server/config.json"
+export PATH="$HOME/.npm-packages/bin:$PATH"
+# export PATH="$(yarn global bin):$PATH"
+export PATH="/usr/local/sbin:$PATH"
 export LC_ALL=en_US.UTF-8
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh"  ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+export PATH="/usr/local/sbin:$PATH"
+export LC_ALL=en_US.UTF-8
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh"  ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/rif/.oh-my-zsh"
+export ZSH="/Users/barbi/.oh-my-zsh"
 
-export PATH=~/.npm-global/bin:$PATH
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+# ZSH_THEME="bira"
+ZSH_THEME='darkblood'
 
-
-#export PATH="/usr/local/opt/node@11/bin:$PATH"
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_OPS="--extended"
-#export PATH="/usr/local/sbin:$PATH"
-
-#NPM_CONFIG_PREFIX=~/.npm-global
-
-if command -v pyenv 1>/dev/null 2>&1; then
-	eval "$(pyenv init -)"
-fi
-
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="af-magic"
-
-# Set list of themes to load
-# Setting this variable when ZSH_THEME=random
-# cause zsh load theme from this variable instead of
-# looking in ~/.oh-my-zsh/themes/
-# An empty array have no effect
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
+# If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
+# Uncomment the following line to automatically update without prompting.
+# DISABLE_UPDATE_PROMPT="true"
+
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS=true
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -72,12 +79,15 @@ ZSH_THEME="af-magic"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Which plugins would you like to load?
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+plugins=(git)
 
-# source $ZSH/oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh
+source $(brew --prefix nvm)/nvm.sh
 
 # User configuration
 
@@ -96,33 +106,50 @@ ZSH_THEME="af-magic"
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-alias rmf="rm -rf"
-alias lsa="ls -la"
-alias rif="cd /Volumes/RIFarhive"
+alias zshconfig="vim ~/.zshrc"
+alias dev="cd ~/dev"
 alias play="cd ~/playground"
-alias playRif="cd /Volumes/RIFarhive/playground"
-alias pj="cd ~/pj"
-alias media="cd /Volumes/RIFarhive/media"
-alias chrome="open -a /Applications/Google\ Chrome.app"
+alias pjs="cd ~/pjs"
+alias ohmyzsh="vim ~/.oh-my-zsh"
+alias rif="/Volumes/RIFarchive"
+alias media="/Volumes/RIFarchive/media"
 alias gc="git checkout"
-alias gb="git branch"
-alias gcm="git checkout master"
-alias gcd="git checkout dev"
-alias gct="git checkout test2"
-alias fig="/Applications/Figma.app/Contents/MacOS/Figma"
-alias ydl="youtube-dl"
-alias stuf="/Volumes/RIFarhive/assets"
-alias dev="~/pj/myKit"
-alias py="/usr/local/Cellar/python@3.8/3.8.1/bin/python3.8"
-alias pip="/usr/local/Cellar/python@3.8/3.8.1/bin/pip3.8"
+alias gcls="git branch | fzf"
+alias yw="yarn workspace"
+alias ywi="yarn workspaces info"
+alias storm="webstorm"
+alias chrome="open -a /Applications/Google\ Chrome.app"
+alias firefox="open -a /Applications/Firefox.app"
+alias pbcopy="xclip -selection clipboard"
+alias typora="open -n -a /Applications/Typora.app README.md"
+alias brewLs="brew list | fzf"
+# alias vim="/usr/local/Cellar/vim/8.2.0200/bin/vim"
+
+function gcoc() {
+	git checkout -b $branch
+}
+function gco() {
+	git checkout $branch
+}
+function gcob() {
+	git checkout $(git branch | fzf)
+}
+function gcorb() {
+	git checkout $(git branch -r | fzf)
+}
+function gremoveb() {
+    git branch -D $(git branch | fzf)
+}
+
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+

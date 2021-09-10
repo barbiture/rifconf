@@ -4,42 +4,74 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 call plug#begin('~/.vim/plugged')
+Plug 'yggdroot/indentline'
+Plug 'leafOfTree/vim-vue-plugin'
+Plug 'vim-scripts/ParseJSON'
+if has('nvim')
+  Plug 'mhartington/nvim-typescript', {'for': ['typescript', 'tsx'], 'do': './install.sh' }
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+Plug 'carlitux/deoplete-ternjs'
+Plug 'meain/vim-package-info', { 'do': 'npm install' }
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
+"Plug 'mxw/vim-jsx'
+Plug 'yuezk/vim-js'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'leafgarland/typescript-vim'
+Plug 'marijnh/tern_for_vim', { 'do': 'npm install && npm install -g tern' }
+Plug 'flazz/vim-colorschemes'
+Plug 'mileszs/ack.vim'
+Plug 'heavenshell/vim-jsdoc', { 'do': 'make clean && make install'}
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'  }
+Plug 'junegunn/fzf.vim'
 Plug 'ap/vim-css-color'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
-Plug 'valloric/youcompleteme'
 Plug 'preservim/nerdcommenter'
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' },
-Plug 'yardnsm/vim-import-cost', { 'do': 'npm install' },
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'yardnsm/vim-import-cost', { 'do': 'npm install' }
 Plug 'kristijanhusak/vim-hybrid-material'
-Plug 'leafgarland/typescript-vim'
-"Plug 'sheerun/vim-polyglot'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim', { 'for': ['javascript', 'html', 'css'] }
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/nerdcommenter'
 Plug 'kien/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'quramy/tsuquyomi'
-Plug '~/.fzf/bin/fzf'
 Plug 'morhetz/gruvbox'
-"Plug 'tlhr/anderson.vimS'
 Plug 'quramy/vim-js-pretty-template'
 Plug 'prettier/vim-prettier'
-Plug 'galooshi/vim-import-js'
+Plug 'galooshi/vim-import-js' , { 'do': 'npm install -g import-js' }
 Plug 'zoubin/vim-gotofile'
 Plug 'airblade/vim-rooter'
 Plug 'w0rp/ale'
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'vim-python/python-syntax'
+Plug 'digitaltoad/vim-jade'
+Plug 'SirVer/ultisnips'
+Plug 'editorconfig/editorconfig-vim'
+"Plug 'valloric/youcompleteme'
+"Plug 'sheerun/vim-polyglot'
+"Plug 'tlhr/anderson.vimS'
 "Plug 'eslint/eslint'
+"Plug 'liuchengxu/vim-clap'
 "Plug 'shougo/vimproc.vim'
 "Plug 'trotzig/import-js'
 "Plug 'mxw/vim-jsx'
 "Plug 'epilande/vim-react-snippets'
 "Plug 'epilande/vim-es2015-snippets'
-"Plug 'SirVer/ultisnips'
 "Plug 'burnettk/vim-angular'
+"Plug 'nathanaelkane/vim-indent-guides'
 call plug#end()
