@@ -1,0 +1,9 @@
+let mapleader=","
+map ; :
+set easymotion
+set showmode
+set so=5
+set incsearch
+set nu
+set number relativenumber
+set nu rnu
